@@ -3,7 +3,7 @@ from .models import Gallery, Image
 
 
 class GalleryAdmin(admin.ModelAdmin):
-    list_display = ('name',)
+    list_display = ('name', 'number_of_images')
 
 
 class ImageAdmin(admin.ModelAdmin):
