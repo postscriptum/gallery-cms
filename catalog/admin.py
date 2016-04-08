@@ -8,6 +8,7 @@ class GalleryAdmin(admin.ModelAdmin):
 
 class ImageAdmin(admin.ModelAdmin):
     list_display = ('name', 'description')
+    filter_horizontal = ('galleries',)
 
 
 admin.site.register(Gallery, GalleryAdmin)
