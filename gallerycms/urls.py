@@ -15,6 +15,9 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 
+from front import views as front_views
+
 urlpatterns = [
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', front_views.main, name='main'),
+    url(r'^control/', include(admin.site.urls)),
 ]
