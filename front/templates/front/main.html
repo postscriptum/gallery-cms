@@ -7,4 +7,10 @@
   <p>Lorem ipsum...</p>
 </div>
 
+{% if general.theme.footer %}
+  <footer class="container-fluid text-center">
+    {{ general.footer_text }}
+  </footer>
+{% endif %}
+
 {% endblock %}
