@@ -2,10 +2,25 @@
 
 {% block content %}
 
-<div class="container-fluid">
-  <h1>Test Page</h1>
-  <p>Lorem ipsum...</p>
-</div>
+{% if general.theme.header %}
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="{% url 'main' %}">{{ general.header_text }}</a>
+      </div>
+    </div>
+  </nav>
+{% endif %}
+
+{% if general.theme.jumbotron %}
+  <div class="container">
+    <div class="jumbotron">
+      {{ general.jumbotron_content }}
+    </div>
+  </div>
+{% endif %}
+
+{% include general.theme.layout %}
 
 {% if general.theme.footer %}
   <footer class="container-fluid text-center">

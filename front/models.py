@@ -3,9 +3,8 @@ from django.db import models
 
 class Theme(models.Model):
     LAYOUT_CHOICES = (
-        (1, 'Aaa'),
-        (2, 'Bbb'),
-        (3, 'Ccc'),
+        ('front/table.html', 'Table'),
+        ('front/collapsed.html', 'Collapsed'),
     )
     #------------------------------------------
     name = models.CharField(max_length=200)
@@ -13,7 +12,7 @@ class Theme(models.Model):
     #------------------------------------------
     header = models.BooleanField(default=False)
     jumbotron = models.BooleanField(default=False)
-    layout = models.SmallIntegerField(choices=LAYOUT_CHOICES, default=1)
+    layout = models.CharField(max_length=50, choices=LAYOUT_CHOICES, default='front/table.html')
     footer = models.BooleanField(default=False)
 
     def __str__(self):
