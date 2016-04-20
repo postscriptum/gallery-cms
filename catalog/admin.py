@@ -5,7 +5,7 @@ from common.widgets import ImageWidget
 
 
 class GalleryAdmin(admin.ModelAdmin):
-    list_display = ('name', 'number_of_images')
+    list_display = ('name', 'number_of_images', 'enabled')
 
 
 class ImageAdmin(admin.ModelAdmin):

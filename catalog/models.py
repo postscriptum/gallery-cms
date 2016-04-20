@@ -4,6 +4,7 @@ from django.db import models
 class Gallery(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField(blank=True)
+    enabled = models.BooleanField(default=True)
 
     def number_of_images(self):
         return self.image_set.count()

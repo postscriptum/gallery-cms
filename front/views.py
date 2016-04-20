@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import General
+from catalog.models import Gallery
 
 
 def main(request):
@@ -11,7 +12,8 @@ def main(request):
             return render(request, 'front/under_construction.html', context)
         # NORMAL page
         context = {
-            'general': general
+            'general': general,
+            'galleries': Gallery.objects.filter(enabled=True)
         }
         return render(request, 'front/main.html', context)
     else:
