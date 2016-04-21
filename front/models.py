@@ -3,8 +3,10 @@ from django.db import models
 
 class Theme(models.Model):
     LAYOUT_CHOICES = (
-        ('front/table.html', 'Table'),
-        ('front/collapsed.html', 'Collapsed'),
+        ('front/grid_3.html', '3 Column Grid'),
+        ('front/grid_4.html', '4 Column Grid'),
+        ('front/slides.html', 'Slides'),
+        ('front/slides_collapsed.html', 'Collapsed Slides'),
     )
     #------------------------------------------
     name = models.CharField(max_length=200)
@@ -12,7 +14,7 @@ class Theme(models.Model):
     #------------------------------------------
     header = models.BooleanField(default=False)
     jumbotron = models.BooleanField(default=False)
-    layout = models.CharField(max_length=50, choices=LAYOUT_CHOICES, default='front/table.html')
+    layout = models.CharField(max_length=50, choices=LAYOUT_CHOICES, default='front/grid_3.html')
     footer = models.BooleanField(default=False)
 
     def __str__(self):
