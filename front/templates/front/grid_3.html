@@ -1,7 +1,20 @@
 <div class="container-fluid">
-  <h1>Test Page</h1>
-  <p>Lorem ipsum...</p>
   {% for gallery in galleries %}
-    <p>{{ gallery.name }}</p>
+    <h3>{{ gallery.name }}</h3>
+    {% if gallery.description %}<p>{{ gallery.description }}</p>{% endif %}
+    <div class="row">
+      {% for image in gallery.image_set.all %}
+
+        <div class="col-sm-4">
+            <img src="{{ image.file.url }}" class="img-responsive">
+        </div>
+
+        {% if forloop.counter|divisibleby:"3" and not forloop.last %}
+          </div><div class="row">
+        {% endif %}
+
+
+      {% endfor %}
+    </div>
   {% endfor %}
 </div>
