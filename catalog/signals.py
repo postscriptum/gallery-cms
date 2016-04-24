@@ -1,5 +1,5 @@
 import os.path
-from os import mkdir
+from os import mkdir, remove
 from PIL import Image
 
 
@@ -23,5 +23,20 @@ def make_preview(sender, **kwargs):
             img.crop((0, top, width, top + width)).save(preview_path)
         else:
             img.save(preview_path)
+    except:
+        pass
+
+
+def delete_images(sender, **kwargs):
+    """Deletes unused images from filesystem"""
+    image = kwargs['instance']
+    image_path = image.file.path
+    image_dir, image_filename = os.path.split(image_path)
+    preview_path = os.path.join(image_dir, 'previews', 'thumb_' + image_filename)
+    try:
+        # delete image file
+        image.file.delete(save=False)
+        # delete preview
+        remove(preview_path)
     except:
         pass
