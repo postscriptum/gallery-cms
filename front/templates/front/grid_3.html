@@ -4,16 +4,12 @@
     {% if gallery.description %}<p>{{ gallery.description }}</p>{% endif %}
     <div class="row">
       {% for image in gallery.image_set.all %}
-
         <div class="col-sm-4">
-            <img src="{{ image.file.url }}" class="img-responsive">
+            <img src="{{ image.preview_url }}" width="100%" class="img-thumbnail">
         </div>
-
         {% if forloop.counter|divisibleby:"3" and not forloop.last %}
           </div><div class="row">
         {% endif %}
-
-
       {% endfor %}
     </div>
   {% endfor %}
