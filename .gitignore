@@ -1,5 +1,5 @@
-venv
+/venv
 **/__pycache__
-gallerycms/settings_local.py
-media
-static
+/gallerycms/settings_local.py
+/media
+/static
