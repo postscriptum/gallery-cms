@@ -9,7 +9,7 @@ class GalleryAdmin(admin.ModelAdmin):
 
 
 class ImageAdmin(admin.ModelAdmin):
-    list_display = ('name', 'description')
+    list_display = ('id', 'name', 'description')
     filter_horizontal = ('galleries',)
     formfield_overrides = {
         models.ImageField: {'widget': ImageWidget},

@@ -16,7 +16,7 @@ class Gallery(models.Model):
 
 class Image(models.Model):
     file = models.ImageField(upload_to='images')
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=200, blank=True)
     description = models.TextField(blank=True)
     galleries = models.ManyToManyField(Gallery, blank=True)
 
