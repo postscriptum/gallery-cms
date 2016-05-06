@@ -1,7 +1,9 @@
 <div class="container-fluid">
   {% for gallery in galleries %}
-    <h3>{{ gallery.name }}</h3>
-    {% if gallery.description %}<p>{{ gallery.description }}</p>{% endif %}
+    <div class="panel panel-primary">
+      <div class="panel-heading">{{ gallery.name }}</div>
+      {% if gallery.description %}<div class="panel-body">{{ gallery.description }}</div>{% endif %}
+    </div>
     <div class="row">
       {% for image in gallery.image_set.all %}
         <div class="col-sm-4">
@@ -14,6 +16,7 @@
         {% endif %}
       {% endfor %}
     </div>
+    <div class="row"><div class="col-sm-12 gallery-footer"></div></div>
   {% endfor %}
 </div>
 {% include "front/modal_image.html" %}
