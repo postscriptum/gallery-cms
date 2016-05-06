@@ -22,9 +22,23 @@
     font-size: 30px;
     opacity: 0.5;
     text-shadow: none;
+    padding: 0;
 }
 #modalImage button.close:hover {
     opacity: 1;
+}
+#modalImage button.btn-info {
+    background-color: transparent;
+    border-style: none;
+    padding: 0;
+    opacity: 0.5;
+}
+#modalImage button.btn-info:hover {
+    opacity: 1;
+}
+#imageInfo {
+    position: absolute;
+    z-index: 20;
 }
 #modalImage .modal-body {
     width: 100%;

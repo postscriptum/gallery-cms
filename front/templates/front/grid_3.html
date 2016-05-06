@@ -7,7 +7,9 @@
     <div class="row">
       {% for image in gallery.image_set.all %}
         <div class="col-sm-4">
-          <a href="" onclick="showModalImage(event, this)" data-url="{{ image.file.url }}">
+          <a href="" onclick="showModalImage(event, this)" data-url="{{ image.file.url }}"
+             {% if image.name %}data-img-name="{{ image.name }}"{% endif %}
+             {% if image.description %}data-img-desc="{{ image.description }}"{% endif %}>
             <img src="{{ image.preview_url }}" width="100%" class="img-thumbnail">
           </a>
         </div>
