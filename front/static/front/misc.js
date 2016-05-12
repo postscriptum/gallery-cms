@@ -1,6 +1,7 @@
 $(document).ready(function() {
     $("#modalImage").on("hide.bs.modal", function() {
         $("#imageInfo").collapse("hide");
+        $("#currentImage").css("opacity", 0);
     });
 });
 
@@ -20,4 +21,9 @@ function showModalImage(ev, elem) {
         $("#btnInfo").show();
     }
     $("#modalImage").modal();
+}
+
+
+function currentImageLoaded(img) {
+    img.style.opacity = 1;
 }
