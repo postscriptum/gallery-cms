@@ -11,7 +11,7 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="{% static "front/misc.js" %}"></script>
   </head>
-  <body>
+  <body style="background-color: {{ general.theme.bg_color }}">
     {% block content %}
     {% endblock %}
   </body>

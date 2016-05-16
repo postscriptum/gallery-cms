@@ -15,7 +15,7 @@
 {% if general.theme.jumbotron %}
   <div class="container">
     <div class="jumbotron">
-      {{ general.jumbotron_content }}
+      {{ general.jumbotron_content|safe }}
     </div>
   </div>
 {% endif %}
