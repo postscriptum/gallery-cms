@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'colorful',
+    'ckeditor',
     'catalog.apps.CatalogConfig',
     'front',
 )
