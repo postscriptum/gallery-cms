@@ -3,7 +3,7 @@
 {% block content %}
 
 {% if general.theme.header %}
-  <nav class="navbar navbar-default">
+  <nav class="navbar navbar-default custom-panel">
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="{% url 'main' %}">{{ general.header_text }}</a>
@@ -13,7 +13,7 @@
 {% endif %}
 
 {% if general.theme.jumbotron %}
-  <div class="container">
+  <div class="container-fluid">
     <div class="jumbotron">
       {{ general.jumbotron_content|safe }}
     </div>
@@ -23,7 +23,7 @@
 {% include general.theme.layout %}
 
 {% if general.theme.footer %}
-  <footer class="container-fluid text-center">
+  <footer class="container-fluid text-center custom-panel">
     {{ general.footer_text }}
   </footer>
 {% endif %}

@@ -18,7 +18,11 @@ class Theme(models.Model):
     jumbotron = models.BooleanField(default=False)
     layout = models.CharField(max_length=50, choices=LAYOUT_CHOICES, default='front/grid_3.html')
     footer = models.BooleanField(default=False)
+    #------------------------------------------
     bg_color = RGBColorField(default='#FFFFFF')
+    text_color = RGBColorField(default='#000000')
+    panel_bg_color = RGBColorField(default='#C0C0C0')
+    panel_text_color = RGBColorField(default='#000000')
 
     def __str__(self):
         return self.name

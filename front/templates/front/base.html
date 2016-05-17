@@ -10,8 +10,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="{% static "front/misc.js" %}"></script>
+    <style>
+      body {
+          background-color: {{ general.theme.bg_color }};
+          color: {{ general.theme.text_color }};
+      }
+      .custom-panel {
+          background-color: {{ general.theme.panel_bg_color }};
+          color: {{ general.theme.panel_text_color }};
+      }
+    </style>
   </head>
-  <body style="background-color: {{ general.theme.bg_color }}">
+  <body>
     {% block content %}
     {% endblock %}
   </body>
