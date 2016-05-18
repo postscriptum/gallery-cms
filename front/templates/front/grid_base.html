@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  {% for gallery in galleries %}
+    <div class="panel">
+      <div class="panel-heading custom-panel">{{ gallery.name }}</div>
+      {% if gallery.description %}<div class="panel-body">{{ gallery.description }}</div>{% endif %}
+    </div>
+    <div class="row">
+      {% for image in gallery.image_set.all %}
+        <div class="{% block col_class %}col-sm-4{% endblock %}">
+          <a href="" onclick="showModalImage(event, this)" data-url="{{ image.file.url }}"
+             {% if image.name %}data-img-name="{{ image.name }}"{% endif %}
+             {% if image.description %}data-img-desc="{{ image.description }}"{% endif %}>
+            <img src="{{ image.preview_url }}" width="100%" class="img-thumbnail">
+          </a>
+        </div>
+        {% block divisible_by %}
+          {% if forloop.counter|divisibleby:"3" and not forloop.last %}
+            </div><div class="row">
+          {% endif %}
+        {% endblock %}
+      {% endfor %}
+    </div>
+    <div class="row"><div class="col-sm-12 gallery-footer"></div></div>
+  {% endfor %}
+</div>
+{% include "front/modal_image.html" %}
