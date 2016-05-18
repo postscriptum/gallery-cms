@@ -1,3 +1,11 @@
+/* general */
+.navbar {
+    border: none;
+    border-radius: 0;
+}
+.navbar-brand {
+    color: inherit;
+}
 /* gallery */
 .gallery-footer {
     height: 40px;

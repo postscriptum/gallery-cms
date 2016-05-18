@@ -18,6 +18,11 @@
       .custom-panel {
           background-color: {{ general.theme.panel_bg_color }};
           color: {{ general.theme.panel_text_color }};
+          border-color: {{ general.theme.panel_text_color }};
+      }
+      .custom-panel .item:hover {
+          background-color: {{ general.theme.panel_text_color }};
+          color: {{ general.theme.panel_bg_color }};
       }
     </style>
   </head>

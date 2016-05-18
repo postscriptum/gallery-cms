@@ -3,10 +3,10 @@
 {% block content %}
 
 {% if general.theme.header %}
-  <nav class="navbar navbar-default custom-panel">
+  <nav class="navbar custom-panel">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="{% url 'main' %}">{{ general.header_text }}</a>
+        <a class="navbar-brand item" href="{% url 'main' %}">{{ general.header_text }}</a>
       </div>
     </div>
   </nav>
