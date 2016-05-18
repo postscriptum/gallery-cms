@@ -1,10 +1,24 @@
 /* general */
 .navbar {
-    border: none;
+    border-bottom: 2px solid transparent;
     border-radius: 0;
 }
 .navbar-brand {
     color: inherit;
+}
+.jumbotron {
+    background-color: transparent;
+}
+.panel {
+    background-color: transparent;
+    box-shadow: none;
+}
+.panel-heading {
+    border: 2px solid transparent;
+    border-radius: 5px;
+}
+footer {
+    border-top: 2px solid transparent;
 }
 /* gallery */
 .gallery-footer {

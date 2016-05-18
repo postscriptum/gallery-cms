@@ -1,7 +1,7 @@
 <div class="container-fluid">
   {% for gallery in galleries %}
-    <div class="panel panel-primary">
-      <div class="panel-heading">{{ gallery.name }}</div>
+    <div class="panel">
+      <div class="panel-heading custom-panel">{{ gallery.name }}</div>
       {% if gallery.description %}<div class="panel-body">{{ gallery.description }}</div>{% endif %}
     </div>
     <div class="row">
