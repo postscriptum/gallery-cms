@@ -21,8 +21,11 @@ footer {
     border-top: 2px solid transparent;
 }
 /* gallery */
+.row {
+    margin-bottom: 30px;
+}
 .gallery-footer {
-    height: 40px;
+    height: 10px;
 }
 /* modal image */
 #modalImage .modal-dialog {
