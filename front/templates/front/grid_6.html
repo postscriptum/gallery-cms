@@ -1,11 +1,11 @@
 {% extends "front/grid_base.html" %}
 
 {% block col_class %}
-col-sm-4
+col-sm-2
 {% endblock %}
 
 {% block divisible_by %}
-{% if forloop.counter|divisibleby:"3" and not forloop.last %}
+{% if forloop.counter|divisibleby:"6" and not forloop.last %}
     </div><div class="row">
 {% endif %}
 {% endblock %}

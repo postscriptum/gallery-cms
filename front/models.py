@@ -5,10 +5,11 @@ from ckeditor.fields import RichTextField
 
 class Theme(models.Model):
     LAYOUT_CHOICES = (
-        ('front/grid_3.html', '3 Column Grid'),
-        ('front/grid_4.html', '4 Column Grid'),
-        ('front/slides.html', 'Slides'),
-        ('front/slides_collapsed.html', 'Collapsed Slides'),
+        ('front/grid_3.html', '3-Column Grid'),
+        ('front/grid_4.html', '4-Column Grid'),
+        ('front/grid_6.html', '6-Column Grid'),
+        #('front/slides.html', 'Slides'),
+        #('front/slides_collapsed.html', 'Collapsed Slides'),
     )
     #------------------------------------------
     name = models.CharField(max_length=200)
