@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.db import models
-from .models import Gallery, Image
+from .models import Gallery, Image, Article
 from common.widgets import ImageWidget
 
 
@@ -16,5 +16,11 @@ class ImageAdmin(admin.ModelAdmin):
     }
 
 
+class ArticleAdmin(admin.ModelAdmin):
+    list_display = ('title', 'slug')
+    prepopulated_fields = {'slug': ('title',)}
+
+
 admin.site.register(Gallery, GalleryAdmin)
 admin.site.register(Image, ImageAdmin)
+admin.site.register(Article, ArticleAdmin)

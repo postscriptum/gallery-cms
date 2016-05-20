@@ -1,4 +1,5 @@
 from django.db import models
+from ckeditor_uploader.fields import RichTextUploadingField
 import os.path
 
 
@@ -26,3 +27,12 @@ class Image(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Article(models.Model):
+    title = models.CharField(max_length=50)
+    slug = models.SlugField()
+    content = RichTextUploadingField()
+
+    def __str__(self):
+        return self.title
