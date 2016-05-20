@@ -1,6 +1,6 @@
 from django.db import models
 from colorful.fields import RGBColorField
-from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
 
 
 class Theme(models.Model):
@@ -32,7 +32,7 @@ class Theme(models.Model):
 class General(models.Model):
     title = models.CharField(max_length=200)
     header_text = models.CharField(max_length=200, default='', blank=True)
-    jumbotron_content = RichTextField(default='', blank=True)
+    jumbotron_content = RichTextUploadingField(default='', blank=True)
     footer_text = models.CharField(max_length=200, default='', blank=True)
     under_construction = models.BooleanField(default=False)
     theme = models.ForeignKey(Theme, blank=True, null=True)

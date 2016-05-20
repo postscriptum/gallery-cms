@@ -20,4 +20,5 @@ from front import views as front_views
 urlpatterns = [
     url(r'^$', front_views.main, name='main'),
     url(r'^control/', include(admin.site.urls)),
+    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 ]

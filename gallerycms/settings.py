@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'colorful',
     'ckeditor',
+    'ckeditor_uploader',
     'catalog.apps.CatalogConfig',
     'front',
 )
@@ -113,6 +114,15 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = '/media/'
+
+
+# CKEditor settings
+
+CKEDITOR_UPLOAD_PATH = 'uploads/'
+
+CKEDITOR_IMAGE_BACKEND = 'pillow'
+
+CKEDITOR_ALLOW_NONIMAGE_FILES = False
 
 
 # Store private settings in unversioned 'settings_local.py'
