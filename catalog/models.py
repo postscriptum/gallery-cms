@@ -33,6 +33,7 @@ class Article(models.Model):
     title = models.CharField(max_length=50)
     slug = models.SlugField()
     content = RichTextUploadingField()
+    enabled = models.BooleanField(default=True)
 
     def __str__(self):
         return self.title

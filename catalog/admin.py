@@ -17,7 +17,7 @@ class ImageAdmin(admin.ModelAdmin):
 
 
 class ArticleAdmin(admin.ModelAdmin):
-    list_display = ('title', 'slug')
+    list_display = ('title', 'slug', 'enabled')
     prepopulated_fields = {'slug': ('title',)}
 
 
