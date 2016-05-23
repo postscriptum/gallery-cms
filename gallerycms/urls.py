@@ -19,6 +19,7 @@ from front import views as front_views
 
 urlpatterns = [
     url(r'^$', front_views.main, name='main'),
+    url(r'^article/(?P<slug>[\w\-]+)/$', front_views.get_article, name='article'),
     url(r'^control/', include(admin.site.urls)),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 ]

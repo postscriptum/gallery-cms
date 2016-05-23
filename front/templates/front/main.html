@@ -12,6 +12,7 @@
   </nav>
 {% endif %}
 
+{% block main_stuff %}
 {% if general.theme.jumbotron %}
   <div class="container-fluid">
     <div class="jumbotron">
@@ -21,6 +22,7 @@
 {% endif %}
 
 {% include general.theme.layout %}
+{% endblock main_stuff %}
 
 {% if general.theme.footer %}
   <footer class="container-fluid text-center custom-panel">
