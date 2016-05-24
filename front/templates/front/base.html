@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {% load static %}
 <html>
+{% if general %}
   <head>
     <title>{{ general.title }}</title>
     <meta charset="utf-8">
@@ -27,7 +28,17 @@
     </style>
   </head>
   <body>
-    {% block content %}
-    {% endblock %}
+    {% if general.under_construction %}
+      <div class="container-fluid custom-panel">
+        <h2>The site is under construction</h2>
+        <h4>Coming back soon</h4>
+      </div>
+    {% else %}
+      {% block content %}{% endblock %}
+    {% endif %}
   </body>
+{% else %}
+  <h2>Error</h2>
+  <p>No general site settings</p>
+{% endif %}
 </html>
