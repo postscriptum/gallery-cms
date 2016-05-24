@@ -1,5 +1,7 @@
 {% extends "front/main.html" %}
 
 {% block main_stuff %}
-{{ article.content }}
+<div class="container">
+  {{ article.content|safe }}
+</div>
 {% endblock %}
