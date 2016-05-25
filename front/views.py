@@ -11,6 +11,6 @@ def main(request):
 
 def get_article(request, slug):
     context = {
-        'article': get_object_or_404(Article, slug=slug)
+        'article': get_object_or_404(Article, slug=slug, enabled=True)
     }
     return render(request, 'front/article.html', context)
