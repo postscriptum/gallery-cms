@@ -3,11 +3,16 @@
 {% block content %}
 
 {% if general.theme.header %}
-  <nav class="navbar custom-panel">
+  <nav class="navbar navbar-fixed-top custom-panel">
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand item" href="{% url 'main' %}">{{ general.header_text }}</a>
       </div>
+      <ul class="nav navbar-nav">
+      {% for article in articles %}
+        <li><a href="{% url 'article' slug=article.slug %}">{{ article.title }}</a></li>
+      {% endfor %}
+      </ul>
     </div>
   </nav>
 {% endif %}
