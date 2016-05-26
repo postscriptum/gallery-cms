@@ -11,7 +11,7 @@
       <ul class="nav navbar-nav">
       {% for item in articles %}
         <li{% if article and article.slug == item.slug %} class="active"{% endif %}>
-          <a href="{% url 'article' slug=item.slug %}">{{ item.title }}</a>
+          <a class="item" href="{% url 'article' slug=item.slug %}">{{ item.title }}</a>
         </li>
       {% endfor %}
       </ul>

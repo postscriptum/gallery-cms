@@ -1,10 +1,15 @@
 /* general */
+body {
+    padding-top: 50px;
+}
 .navbar {
     border-bottom: 2px solid transparent;
     border-radius: 0;
 }
-.navbar-brand {
+.navbar-brand,
+.nav > li > a {
     color: inherit;
+    font-size: 18px;
 }
 .jumbotron {
     background-color: transparent;
