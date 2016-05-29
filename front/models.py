@@ -8,8 +8,7 @@ class Theme(models.Model):
         ('front/grid_3.html', '3-Column Grid'),
         ('front/grid_4.html', '4-Column Grid'),
         ('front/grid_6.html', '6-Column Grid'),
-        #('front/slides.html', 'Slides'),
-        #('front/slides_collapsed.html', 'Collapsed Slides'),
+        ('front/slides.html', 'Slides'),
     )
     #------------------------------------------
     name = models.CharField(max_length=200)
@@ -33,7 +32,7 @@ class General(models.Model):
     title = models.CharField(max_length=200)
     header_text = models.CharField(max_length=200, default='', blank=True)
     jumbotron_content = RichTextUploadingField(default='', blank=True)
-    footer_text = models.CharField(max_length=200, default='', blank=True)
+    footer_text = RichTextUploadingField(default='', blank=True)
     under_construction = models.BooleanField(default=False)
     theme = models.ForeignKey(Theme, blank=True, null=True)
 
