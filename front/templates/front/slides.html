@@ -5,8 +5,8 @@
       {% if gallery.description %}<div class="panel-body">{{ gallery.description }}</div>{% endif %}
     </div>
     <div class="row">
-      <div class="col-sm-3"></div>
-      <div class="col-sm-6">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8">
         <div id="gallery_{{ forloop.counter }}" class="carousel slide" data-interval="false">
           <div class="carousel-inner" role="listbox">
             {% for image in gallery.image_set.all %}
@@ -14,7 +14,7 @@
                 <a href="" onclick="showModalImage(event, this)" data-url="{{ image.file.url }}"
                    {% if image.name %}data-img-name="{{ image.name }}"{% endif %}
                    {% if image.description %}data-img-desc="{{ image.description }}"{% endif %}>
-                  <img src="{{ image.preview_url }}" class="img-thumbnail" width="70%" style="margin: auto">
+                  <img src="{{ image.preview_url }}" class="img-thumbnail" width="60%" style="margin: auto">
                 </a>
               </div>
             {% endfor %}
@@ -29,7 +29,7 @@
           </a>
         </div>
       </div>
-      <div class="col-sm-3"></div>
+      <div class="col-sm-2"></div>
     </div>
     <div class="row"><div class="col-sm-12 gallery-footer"></div></div>
   {% endfor %}
