@@ -33,7 +33,7 @@
 
 {% if general.theme.footer %}
   <footer class="container-fluid text-center custom-panel">
-    {{ general.footer_text }}
+    {{ general.footer_text|safe }}
   </footer>
 {% endif %}
 
