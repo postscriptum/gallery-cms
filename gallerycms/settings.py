@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'colorful',
     'ckeditor',
     'ckeditor_uploader',
+    'admin_reorder',
     'catalog.apps.CatalogConfig',
     'front',
 )
@@ -53,6 +54,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'admin_reorder.middleware.ModelAdminReorder',
 )
 
 ROOT_URLCONF = 'gallerycms.urls'
@@ -124,6 +126,30 @@ CKEDITOR_UPLOAD_PATH = 'uploads/'
 CKEDITOR_IMAGE_BACKEND = 'pillow'
 
 CKEDITOR_ALLOW_NONIMAGE_FILES = False
+
+
+# ADMIN_REORDER settings
+
+ADMIN_REORDER = (
+    {
+        'app': 'front',
+        'label': 'Settings',
+        'models': (
+            {'model': 'front.General', 'label': 'General'},
+            'front.Theme',
+            'auth.User',
+        )
+    },
+    {
+        'app': 'catalog',
+        'label': 'Content',
+        'models': (
+            'catalog.Gallery',
+            'catalog.Image',
+            'catalog.Article',
+        )
+    },
+)
 
 
 # Store private settings in unversioned 'settings_local.py'
