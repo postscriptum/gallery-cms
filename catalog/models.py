@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.html import format_html
 from ckeditor_uploader.fields import RichTextUploadingField
 import os.path
 
@@ -24,6 +25,11 @@ class Image(models.Model):
     def preview_url(self):
         img_path, img_file = os.path.split(self.file.url)
         return os.path.join(img_path, 'previews', 'thumb_' + img_file)
+
+    def list_display_preview(self):
+        return format_html('<img src="{}" height="150">', self.preview_url())
+    list_display_preview.allow_tags = True
+    list_display_preview.short_description = 'Image'
 
     def __str__(self):
         return self.name
