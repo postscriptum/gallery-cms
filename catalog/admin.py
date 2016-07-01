@@ -10,6 +10,7 @@ class ImageInline(admin.TabularInline):
     model = Image.galleries.through
     model.__str__ = lambda x: ''
     extra = 0
+    can_delete = False
     verbose_name = 'Image'
     verbose_name_plural = 'Images'
     exclude = ('image',)

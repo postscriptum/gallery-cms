@@ -10,5 +10,16 @@ class GeneralAdmin(admin.ModelAdmin):
         return False
 
 
+class ThemeAdmin(admin.ModelAdmin):
+    fields = (
+        'name',
+        'description',
+        ('header', 'jumbotron', 'footer'),
+        'layout',
+        ('bg_color', 'text_color'),
+        ('panel_bg_color', 'panel_text_color')
+    )
+
+
 admin.site.register(General, GeneralAdmin)
-admin.site.register(Theme)
+admin.site.register(Theme, ThemeAdmin)
