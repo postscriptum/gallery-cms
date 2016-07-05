@@ -7,6 +7,7 @@ import os.path
 class Gallery(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField(blank=True)
+    order = models.SmallIntegerField(default=10)
     enabled = models.BooleanField(default=True)
 
     def number_of_images(self):
@@ -14,6 +15,9 @@ class Gallery(models.Model):
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        verbose_name_plural = "Galleries"
 
 
 class Image(models.Model):

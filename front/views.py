@@ -4,7 +4,7 @@ from catalog.models import Gallery, Article
 
 def main(request):
     context = {
-        'galleries': Gallery.objects.filter(enabled=True)
+        'galleries': Gallery.objects.filter(enabled=True).order_by('order')
     }
     return render(request, 'front/main.html', context)
 

@@ -36,7 +36,7 @@ class ImageInline(admin.TabularInline):
 
 
 class GalleryAdmin(admin.ModelAdmin):
-    list_display = ('name', 'number_of_images', 'enabled')
+    list_display = ('name', 'order', 'number_of_images', 'enabled')
     inlines = [ImageInline]
 
 
