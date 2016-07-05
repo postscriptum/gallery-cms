@@ -13,8 +13,9 @@ class GeneralAdmin(admin.ModelAdmin):
 class ThemeAdmin(admin.ModelAdmin):
     fields = (
         'name',
-        'description',
-        ('header', 'jumbotron', 'footer'),
+        'header',
+        'jumbotron',
+        'footer',
         'layout',
         ('bg_color', 'text_color'),
         ('panel_bg_color', 'panel_text_color')

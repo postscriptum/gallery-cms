@@ -135,7 +135,7 @@ ADMIN_REORDER = (
         'app': 'front',
         'label': 'Settings',
         'models': (
-            {'model': 'front.General', 'label': 'General'},
+            'front.General',
             'front.Theme',
             'auth.User',
         )
