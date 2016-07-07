@@ -1,0 +1,108 @@
+[
+{
+    "pk": 1,
+    "model": "front.theme",
+    "fields": {
+        "panel_text_color": "#fefef0",
+        "name": "Gray and Magenta",
+        "bg_color": "#b0b0b0",
+        "footer": true,
+        "text_color": "#040404",
+        "header": true,
+        "panel_bg_color": "#5a0808",
+        "description": "",
+        "layout": "front/slides.html",
+        "jumbotron": true
+    }
+},
+{
+    "pk": 2,
+    "model": "front.theme",
+    "fields": {
+        "panel_text_color": "#fefef0",
+        "name": "White and Blue",
+        "bg_color": "#fefef0",
+        "footer": false,
+        "text_color": "#040404",
+        "header": true,
+        "panel_bg_color": "#1b76cf",
+        "description": "",
+        "layout": "front/grid_4.html",
+        "jumbotron": true
+    }
+},
+{
+    "pk": 3,
+    "model": "front.theme",
+    "fields": {
+        "panel_text_color": "#000000",
+        "name": "Black and White",
+        "bg_color": "#000000",
+        "footer": false,
+        "text_color": "#fefef0",
+        "header": false,
+        "panel_bg_color": "#fefef0",
+        "description": "",
+        "layout": "front/grid_3.html",
+        "jumbotron": true
+    }
+},
+{
+    "pk": 4,
+    "model": "front.theme",
+    "fields": {
+        "panel_text_color": "#245a04",
+        "name": "Green and Yellow",
+        "bg_color": "#367b0e",
+        "footer": true,
+        "text_color": "#e7e757",
+        "header": false,
+        "panel_bg_color": "#e7e757",
+        "description": "",
+        "layout": "front/grid_6.html",
+        "jumbotron": true
+    }
+},
+{
+    "pk": 1,
+    "model": "front.general",
+    "fields": {
+        "under_construction": false,
+        "theme": 1,
+        "jumbotron_content": "<h3>Info block</h3>\r\n\r\n<p>Contains brief information about images, author(s), etc. This block is optional. Various text styles and pictures are available here.</p>\r\n",
+        "title": "My Gallery",
+        "header_text": "Home",
+        "footer_text": "<h4>Footer text</h4>\r\n\r\n<p>Footer is optional. Various text styles and pictures are available here.</p>\r\n\r\n<p>&nbsp;</p>\r\n"
+    }
+},
+{
+    "pk": 1,
+    "model": "catalog.article",
+    "fields": {
+        "enabled": true,
+        "title": "Info",
+        "content": "<h3>&nbsp;</h3>\r\n\r\n<h3>Sample: additional information</h3>\r\n\r\n<h4>Various text styles and pictures are available here.</h4>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n",
+        "slug": "info"
+    }
+},
+{
+    "pk": 2,
+    "model": "catalog.article",
+    "fields": {
+        "enabled": true,
+        "title": "About",
+        "content": "<h3>&nbsp;</h3>\r\n\r\n<h3>Sample: information about author(s)</h3>\r\n\r\n<h4>Various text styles and pictures are available here.</h4>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n",
+        "slug": "about"
+    }
+},
+{
+    "pk": 3,
+    "model": "catalog.article",
+    "fields": {
+        "enabled": true,
+        "title": "Contacts",
+        "content": "<h3>&nbsp;</h3>\r\n\r\n<h3>Sample: contacts information</h3>\r\n\r\n<h4>Various text styles and pictures are available here.</h4>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n",
+        "slug": "contacts"
+    }
+}
+]
