@@ -33,6 +33,9 @@ footer {
     height: 10px;
 }
 /* modal image */
+#modalImage {
+    background-color: #101010;
+}
 #modalImage .modal-dialog {
     width: 90%;
     height: 90%;
@@ -71,6 +74,9 @@ footer {
     z-index: 20;
     max-width: 25%;
     min-width: 10%;
+}
+#imageInfo .panel-heading {
+    margin: 5px;
 }
 #modalImage .modal-body {
     width: 100%;
